@@ -16,6 +16,7 @@ phases:
       - echo Deploying infra
       - (cd infrastructure && serverless deploy -v --force --env=prd)
       - echo vue
+      - cd vue-project
       - npm install
   build:
     commands:
