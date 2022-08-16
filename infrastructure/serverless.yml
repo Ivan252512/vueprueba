@@ -9,8 +9,8 @@ provider:
   stage: 'stg'
 
 custom:
-  app_name: 'prueba-vue'
-  service_name: PruebaVue
+  app_name: 'vue-project'
+  service_name: vue-project
 
 resources:
   - $(file(resources/bucket.yml))
