@@ -21,7 +21,10 @@ phases:
   build:
     commands:
       - echo Build Phase
+      - ls
+      - echo ls build phase
       - npm run build
+      - ls
   post_build:
     commands:
       - echo PostBuild Phase
