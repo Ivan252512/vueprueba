@@ -25,6 +25,6 @@ phases:
   post_build:
     commands:
       - echo PostBuild Phase
-      - cd vue-project
-      - aws s3 sync ./dist s3://botentry
+      - ls
+      - aws s3 sync ./vue-project/dist s3://botentry
       - echo Finished
