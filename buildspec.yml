@@ -2,13 +2,20 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 12
+      python: 3.8
     commands:
+      - npm install -g serverless@latest
+      - npm install serverless-python-requirements
       - npm i npm@latest -g
       - pip install --upgrade pip
       - pip install --upgrade awscli
   pre_build:
     commands:
-      - echo Pre_build Phase
+      - echo Deploying infra
+      - (cd infrastructure && serverless deploy -v --force --env=prd)
+      - echo vue
       - npm install
   build:
     commands:
@@ -18,3 +25,4 @@ phases:
     commands:
       - echo PostBuild Phase
       - aws s3 sync ./vue-project/dist VueProjectGBM25
+      - echo Finished
