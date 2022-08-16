@@ -1,3 +1,4 @@
+---
 Resources:
   APPVuePruebaBucket:
     Type: AWS::S3::Bucket
@@ -13,3 +14,4 @@ Resources:
           BlockPublicPolicy: false
           IgnorePublicAcls: false
           RestrictPublicBuckets: false
+...

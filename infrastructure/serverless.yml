@@ -1,3 +1,4 @@
+---
 service: "vue-project"
 plugins:
   - serverless-python-requirements
@@ -13,4 +14,5 @@ custom:
   service_name: vue-project
 
 resources:
-  - $(file(resources/bucket.yml))
+  - ${file(resources/bucket.yml)}
+...
