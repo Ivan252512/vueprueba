@@ -1,0 +1,15 @@
+Resources:
+  APPVuePruebaBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: "VueProjectGBM25"
+      AccesControl: Public
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+        - ServerSideEncryptionByDefault:
+            SSEAlgorithm: AES256
+        PublicAcessBlockConfiguration:
+          BlockPublicAcls: false
+          BlockPublicPolicy: false
+          IgnorePublicAcls: false
+          RestrictPublicBuckets: false

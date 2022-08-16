@@ -1,0 +1,16 @@
+service: "vue-project"
+plugins:
+  - serverless-python-requirements
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: 'us-east-1'
+  stage: 'stg'
+
+custom:
+  app_name: 'prueba-vue'
+  service_name: PruebaVue
+
+resources:
+  - $(file(resources/bucket.yml))
