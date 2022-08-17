@@ -30,4 +30,5 @@ phases:
       - echo PostBuild Phase
       - ls
       - aws s3 sync ./dist s3://botentry
+      - aws s3api put-bucket-acl --bucket botentry --acl public-read
       - echo Finished
